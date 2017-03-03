@@ -1,0 +1,72 @@
+<html>
+<script>
+//practice
+
+var a = [1,5,6,8,7];
+
+//findMax with a for loop
+var findMax = function(b){
+    var max = 0;
+    for(var i = 0;i<b.length;i++){
+        if(b[i]>max){
+            max = b[i];
+        }
+    }
+    return max;
+};
+
+console.log('using a for loop:\n');
+console.log('\tmaximum value: ' + JSON.stringify(findMax(a)));
+
+//now try with reduce
+//first, define a new function to pass to reduce
+var findMax2 = function(previous,current){
+    if(current>previous){
+        return current;
+    }
+    else{
+        return previous;
+    }
+};
+
+//define the new max which we find using reduce
+var newMax = a.reduce(findMax2,0);
+
+console.log('using reduce:\n');
+console.log('\tnew max: ' + JSON.stringify(newMax));
+
+//add with a for loop
+var add = function(b){
+    var sum = 0;
+    for(var i = 0;i<b.length;i++){
+        sum += b[i];
+    }
+    return sum;
+};
+
+console.log('using a for loop:\n');
+console.log('\tsum: ' + JSON.stringify(add(a)));
+
+//now add with reduce
+
+/* 
+Reduce expects a function as the first argument. In this case, we have used an anonymous function since it was simple.
+However, we could have defined a function separately as well.
+*/
+
+var newSum = a.reduce(function(previous,current){
+    return previous + current;
+},0);
+
+console.log('using reduce:\n');
+console.log('\tnew sum: ' + JSON.stringify(newSum));
+
+//so far, so good; on to filter
+var isBigEnough = function(element){
+    var comparison = element > 2;
+    return comparison;
+};
+var filtered = a.filter(isBigEnough);
+console.log(JSON.stringify(filtered));
+</script>
+</html>
