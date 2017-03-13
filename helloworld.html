@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- In this document, we will experiment with basic HTML functions in order to gain familiarity with the language. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HELLO, WORLD! -->
+    <h1>Hello, World!</h1>
+    <p>This is an introductory "Hello, World!" example for writing HTML.</p>
+    <p>You can add more text in your pages in the form of paragraphs as you go along.</p>
+    <!-- Break -->
+    <br>
+    <p>Of course, if you need to add additional space between paragraphs, you can do so as well. Notice that you can add as many breaks as you need.</p>
+    <!-- Horizontal Rule (i.e. separating a document into sections)-->
+    <hr>
+    <h1>New Section</h1>
+    <p>Furthemore, we can separate content on a page in the same manner that a book or a document separates content in the form of chapters.</p>
+    <!-- IMAGES, LINKS, AND TEXT MODIFYERS -->
+    <h2>Adding Images and Modifying Text</h2>
+    <p>We can even add images which link to other pages!</p>
+    <a href="http://www.mit.edu">
+    <img src="http://logodatabases.com/wp-content/uploads/2012/05/mit-university-logo.jpg" width="250"></a>
+    <!-- How would we make the link open in a new tab? -->
+    <!-- We can modify the text within a document using bold, text, underline, and even code.-->
+    <p>This is a very simple example, but it demonstrates the use of a <b>very powerful tool</b>. If the document is large, we can use links to reference information within the same document which makes navigating the document much more convenient. Notice that we put some emphasis on a previous phrase by displaying it in <b>bold</b>. Similaryly, we can add other text modifiers such as <i>italicize</i> and <u>underline</u>. We can even display text as <code>computer code</code>!</p>
+    <p>We can also add block quotes which we can later reference.</p>
+    <!-- Block Quotes -->
+    <blockquote>
+        "This is a quote from a famous person."
+    </blockquote>
+    <hr>
+    <!-- LISTS -->
+    <h2>Lists</h2>
+    <!-- Unordered List -->
+    <p>We can create several types of lists within a document. The first type of list we will discuss is the <i>unordered list</i>. As the name implies, this type of list simply itemizes several items withouth numbering them or ordering them.</p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <!-- Ordered List -->
+    <p>Conversely, the <i>ordered list</i> does number a list of items.</p>
+    <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+    <!-- Definition List -->
+    <p>As a next example, let's discuss the <i>definition list</i>.</p>
+    <dl>
+        <!-- Definition Term -->
+        <dt>HTML</dt>
+        <!-- Definition Description -->
+        <dd>
+            HyperText Markup Language
+        </dd>
+        <dt>CSS</dt>
+        <dd>
+            Cascading Style Sheets
+        </dd>
+    </dl>
+    <p>These lists can be as long as we need them to be.</p>
+    <hr>
+    <!-- TABLES -->
+    <h2>Tables</h2>
+    <p>It is often useful to display information in the form of tables, so we should discuss how to go about doing that.</p>
+    <!-- Create a new table -->
+    <table border="1px">
+        <!-- Table Row-->
+        <tr>
+            <!-- Table Header -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <!-- Cells within the row -->
+            <td>Peter</td>              <!-- First cell, first column -->
+            <td>Parker</td>             <!-- Second cell, first column -->
+            <td>spiderman@mit.edu</td>  <!-- Third cell, first column -->
+        </tr>
+        <tr>
+            <td>Bruce</td>              <!-- First cell, second column -->
+            <td>Wayne</td>              <!-- Second cell, second column -->
+            <td>batman@mit.edu</td>     <!-- Third cell, second column -->
+        </tr>
+    </table>
+    <hr>
+    <!-- FORMS -->
+    <h2>Forms</h2>
+    <p>Another useful, and sometimes necessary, function is to request data from the user.</p>
+    <form>
+        <!-- Text Input -->
+        <input type="text" name="firstName">
+        <input type="text" name="lastName">
+        <!-- Submit Button -->
+        <input type="submit" name="Save">
+    <br><br>
+        <!-- Radio Button-->
+        Male<input type="radio" name="gender" value="male">
+        Female<input type="radio" name="gender" value="female">
+    </form>
+</body>
+</html>

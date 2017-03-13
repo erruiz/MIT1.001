@@ -1,0 +1,20 @@
+<html>
+    <script>
+        var unitVectors = {
+            e1: {x:1,y:0,z:0},
+            e2: {x:0,y:1,z:0},
+            e3: {x:0,y:0,z:1}
+        };
+
+        var vecSum = function(vectors){
+            var xComponent = vectors.e1.x + vectors.e2.x + vectors.e3.x;
+            var yComponent = vectors.e1.y + vectors.e2.y + vectors.e3.y;
+            var zComponent = vectors.e1.z + vectors.e3.z + vectors.e3.z;
+            return {x: xComponent, y: yComponent, z: zComponent};
+        };
+
+        var newVector = unitVectors.reduce(vecSum);
+
+        console.log('x: ' + JSON.stringify(newVector.x) + ', y: ' + JSON.stringify(newVector.y) + ', z: ' + JSON.stringify(newVector.z));
+    </script>
+</html>
